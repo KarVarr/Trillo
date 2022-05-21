@@ -211,11 +211,17 @@ span
 
 .gallery
     display: flex
+    
     &__item 
-
+        transition: all .4s
+        
+        &:hover
+            filter: brightness(1.2)
+            filter: saturate(1.5)
     &__photo 
         width: 100%
         display: block
+   
 
 // HOTEL OVERVIEW   
 

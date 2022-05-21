@@ -541,6 +541,18 @@ span {
   display: flex;
 }
 
+.gallery__item {
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.gallery__item:hover {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+  -webkit-filter: saturate(1.5);
+          filter: saturate(1.5);
+}
+
 .gallery__photo {
   width: 100%;
   display: block;
