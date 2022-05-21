@@ -8,6 +8,11 @@
     display: flex
     align-items: center
     justify-content: center
+
+    @media only screen and(max-width: $bp-smallest)
+        order: 1
+        flex: 0 0 100%
+        
     &__input
         font-family: inherit
         font-size: inherit
@@ -19,6 +24,8 @@
         width: 70%
         transition: all 2s ease-in
         margin-right: -3.25rem
+        
+
         &::placeholder
             color: var(--color-grey-dark-3)
             font-weight: 100
@@ -107,6 +114,13 @@
     font-size: 1.4rem
     list-style: none
     margin-top: 3.5rem
+
+    @media only screen and (max-width: $bp-medium)
+        display: flex
+        margin-top: 0
+        
+        
+
     
     &__item 
         display: flex
@@ -114,7 +128,17 @@
         cursor: pointer
         &:not(:last-child)
             margin-bottom: .5rem    
+        @media only screen and (max-width: $bp-medium)
+            flex: 1 
+            justify-content: center
+            margin-right: 1rem
+            &:not(:last-child)
+                margin-bottom: 0
+        @media only screen and(max-width: $bp-small)
+            flex-direction: column    
+            align-items: center
             
+                
 
     &__item::before
         content: ""
@@ -145,26 +169,21 @@
         text-decoration: none
         text-transform: uppercase
         display: block
-        padding: 1.5rem 1.5rem
+        padding: 1.5rem 
         position: relative
         z-index: 4
+        @media only screen and(max-width: $bp-small)
+            padding: .5rem  
+            
         
 
     a > i
         width: 1.75rem
         height: 1.75rem
-        
         color: var(--color-grey-light-1)
-        
-    .fa-solid 
-
-    .fa-home 
-
-    .fa-plane 
-
-    .fa-key 
-
-    .fa-map 
+        @media only screen and(max-width: $bp-small)
+            font-size: 1.2rem
+            
 
 span 
     text-transform: uppercase
@@ -173,7 +192,9 @@ span
     color: var(--color-grey-light-1)
     position: relative
     z-index: 4
-
+    @media only screen and(max-width: $bp-small)
+        margin-bottom: 0.5rem
+    
 
 // LEGAL
 
@@ -182,7 +203,8 @@ span
     color: var(--color-grey-light-4)
     text-align: center
     padding: 2.5rem
-    
+    @media only screen and (max-width: $bp-medium)
+        display: none
 
 // GALLERY
 
@@ -201,12 +223,22 @@ span
     display: flex
     align-items: center
     border-bottom: 1px solid var(--color-grey-light-2)
+    
+        
+    
     &__heading 
         font-size: 2.25rem
         font-weight: 300
         text-transform: uppercase
         letter-spacing: 1px
         padding: 1.5rem 3rem
+        
+
+        @media only screen and(max-width: $bp-small)
+            font-size: 1.7rem
+            padding: 1.25rem 2rem
+        @media only screen and(max-width: $bp-smallest)
+            font-size: 1rem
     &__stars
         margin-right: auto
         display: flex
@@ -229,6 +261,8 @@ span
         display: flex
         align-items: center
         font-size: 1.5rem
+        @media only screen and(max-width: $bp-smallest)
+            font-size: 1rem
     
     &__rating 
         background-color: var(--color-primary)
@@ -241,14 +275,25 @@ span
         align-items: center
         justify-content: center
         flex-direction: column
+        @media only screen and(max-width: $bp-small)
+            padding: 0 1.5rem
+        @media only screen and(max-width: $bp-smallest)
+            padding: 0 1rem
+
 
     &__rating-average 
         font-size: 2.25rem
         font-weight: 300
         margin-bottom: -3px
+
+        @media only screen and(max-width: $bp-small)
+            font-size: 1.7rem
+
     &__rating-count 
         font-size: 0.8rem
         text-transform: uppercase
+        @media only screen and(max-width: $bp-small)
+            font-size: 1.2rem
 
 
 
@@ -352,6 +397,7 @@ span
             margin-right: -2rem
 
     &__friends  
+        display: flex
 
 
     &__count 
@@ -366,6 +412,10 @@ span
     margin-bottom: 3.5rem
     position: relative
     overflow: hidden
+
+    @media only screen and (max-width: $bp-medium)
+        padding: 2rem 
+        margin-bottom: 3rem
     &::before
         content: "\201C"
         position: absolute
@@ -413,6 +463,8 @@ span
 .cta
     padding: 3.5rem 0
     text-align: center
+    @media only screen and (max-width: $bp-medium)
+        padding: 2.5rem 0
 
     &__book-now
         font-size: 2rem
